@@ -9,118 +9,101 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.philipgo.arduinobluetoothrccar.MainActivity">
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:text="Forward"
+        android:id="@+id/forward_btn"
+        android:layout_marginTop="150dp"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/forward_right_btn"
+        android:layout_toStartOf="@+id/forward_right_btn" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:text="forward&#10;LEFT"
+        android:id="@+id/forward_left_btn"
+        android:layout_below="@+id/forward_btn"
+        android:layout_toLeftOf="@+id/forward_btn"
+        android:layout_toStartOf="@+id/forward_btn" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:text="forward&#10;RIGHT"
+        android:id="@+id/forward_right_btn"
+        android:layout_above="@+id/reverse_btn"
+        android:layout_toRightOf="@+id/reverse_btn"
+        android:layout_toEndOf="@+id/reverse_btn" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:text="REVERSE"
+        android:id="@+id/reverse_btn"
+        android:layout_below="@+id/forward_left_btn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="48dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:text="Reverse&#10;Left"
+        android:id="@+id/reverse_left_btn"
+        android:layout_below="@+id/forward_left_btn"
+        android:layout_alignLeft="@+id/forward_left_btn"
+        android:layout_alignStart="@+id/forward_left_btn"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:text="Reverse&#10;Right"
+        android:id="@+id/reverse_right_btn"
+        android:layout_below="@+id/forward_right_btn"
+        android:layout_toRightOf="@+id/reverse_btn"
+        android:layout_alignRight="@+id/forward_right_btn"
+        android:layout_alignEnd="@+id/forward_right_btn" />
 
 
-    <TableLayout
+
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
-        <TableRow
-            android:id="@+id/tableRow1"
+        android:layout_above="@+id/forward_left_btn"
+        android:layout_marginBottom="94dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:paddingTop="20dp"
+        android:weightSum="1">
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Plus"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/btnPlus"
+            android:layout_weight="0.18" />
+
+        <TextView
             android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:layout_weight="1" >
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="1"
+            android:layout_marginLeft="30dp"
+            android:id="@+id/tvGear"
+            android:layout_weight="0.18" />
 
-            <Button
-                android:id="@+id/button1"
-                android:layout_width="0dip"
-                android:layout_height="fill_parent"
-                android:layout_weight="1"
-                android:text="1"/>
-
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="0dip"
-                android:layout_height="fill_parent"
-                android:layout_weight="1"
-                android:text="2" />
-            <Button
-                android:id="@+id/button3"
-                android:layout_width="0dip"
-                android:layout_height="fill_parent"
-                android:layout_weight="1"
-                android:text="3" />
-        </TableRow>
-
-
-        <TableRow
-            android:id="@+id/tableRow2"
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:layout_weight="1" >
-
-            <Button
-                android:id="@+id/button4"
-                android:layout_width="0dip"
-                android:layout_height="fill_parent"
-                android:layout_weight="1"
-                android:text="4"/>
-
-            <Button
-                android:id="@+id/button5"
-                android:layout_width="0dip"
-                android:layout_height="fill_parent"
-                android:layout_weight="1"
-                android:text="5" />
-            <Button
-                android:id="@+id/button6"
-                android:layout_width="0dip"
-                android:layout_height="fill_parent"
-                android:layout_weight="1"
-                android:text="6" />
-        </TableRow>
-
-        <TableRow
-            android:id="@+id/tableRow3"
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:layout_weight="1" >
-
-            <Button
-                android:id="@+id/button7"
-                android:layout_width="0dip"
-                android:layout_height="fill_parent"
-                android:layout_weight="1"
-                android:text="7"/>
-
-            <Button
-                android:id="@+id/button8"
-                android:layout_width="0dip"
-                android:layout_height="fill_parent"
-                android:layout_weight="1"
-                android:text="8" />
-            <Button
-                android:id="@+id/button9"
-                android:layout_width="0dip"
-                android:layout_height="fill_parent"
-                android:layout_weight="1"
-                android:text="9" />
-        </TableRow>
-
-
-        <TableRow
-            android:id="@+id/tableRow4"
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:layout_weight="1" >
-
-            <Button
-                android:id="@+id/button10"
-                android:layout_width="0dip"
-                android:layout_height="fill_parent"
-                android:layout_weight="1"
-                android:text="Connect"/>
-
-            <Button
-                android:id="@+id/button11"
-                android:layout_width="0dip"
-                android:layout_height="fill_parent"
-                android:layout_weight="1"
-                android:text="Disconnect" />
-        </TableRow>
-
-    </TableLayout>
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:text="Minus"
+            android:id="@+id/btnMinus"
+            android:layout_weight="0.13" />
+    </LinearLayout>
 
 
 </RelativeLayout>

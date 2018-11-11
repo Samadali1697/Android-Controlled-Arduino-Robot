@@ -1,0 +1,62 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BTMainActivity">
+    
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/tvConnectionStatus"
+        android:gravity="center"
+        android:background="@android:color/white"
+        android:text="@string/BT_connection_status"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/llEditor"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/ibScanBT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:text="Scan Bt"
+            android:textColor="#fff"/>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="2dp"
+            android:background="#fff"/>
+        <Button
+            android:id="@+id/ibSendMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:text="Next"
+            android:textColor="#fff"/>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/tvMonitor"
+        android:layout_above="@+id/llEditor"
+        android:layout_below="@id/tvConnectionStatus"
+        android:background="#fff"
+        android:padding="8dp"
+        android:scrollbars="vertical"
+        android:scrollbarStyle="insideOverlay"
+        android:fadeScrollbars="true"
+        android:fadingEdge="vertical"/>
+
+
+</RelativeLayout>
